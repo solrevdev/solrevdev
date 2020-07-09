@@ -1,5 +1,11 @@
-### John Smith (solrevdev) 
+### John Smith (solrevdev) :wave:
 
-- 🔭 I’m currently working on C# and JavaScript
-- 🌱 I’m currently learning everything I can find
-- 📫 How to reach me: [Twitter](https://twitter.com/solrevdev), [LinkedIn](https://www.linkedin.com/in/solrevdev), [Website](https://solrevdev.com/about/)
+- 🔭 A C#, .NET Core and ASP.NET Core software developer.
+- 🇬🇧 Based in Oxford UK
+- 🏠 https://solrevdev.com
+
+### Get in touch 📧
+
+- [Twitter](https://twitter.com/solrevdev)
+- [LinkedIn](https://www.linkedin.com/in/solrevdev)
+- [Website](https://solrevdev.com/about/)
