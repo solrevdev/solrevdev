@@ -1,4 +1,4 @@
-### Hi there 👋
+### John Smith (solrevdev) 
 
 - 🔭 I’m currently working on C# and JavaScript
 - 🌱 I’m currently learning everything I can find
