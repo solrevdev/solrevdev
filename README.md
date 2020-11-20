@@ -9,3 +9,7 @@
 - [Twitter](https://twitter.com/solrevdev)
 - [LinkedIn](https://www.linkedin.com/in/solrevdev)
 - [Website](https://solrevdev.com/about/)
+
+### Latest articles 📩 
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
