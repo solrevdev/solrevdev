@@ -12,6 +12,7 @@
 
 ### Latest articles 📩 
 <!-- BLOG-POST-LIST:START -->
+- [Dllnotfoundexception Unable To Load Shared Library Libgdiplus Or One Of Its Dependencies](https://solrevdev.com/2020/12/04/dllnotfoundexception-unable-to-load-shared-library-libgdiplus-or-one-of-its-dependencies.html)
 - [Migrate .NET Core 3.1 to .NET Core 5.0](https://solrevdev.com/2020/11/13/how-to-migrate-from-dotnet-core-31-to-dotnet-core-50.html)
 - [Creating a .NET Core Global Tool](https://solrevdev.com/2020/10/05/creating-a.net-core-global-tool.html)
 - [Spotlight stops indexing Applications](https://solrevdev.com/2020/10/02/spotlight-stops-indexing-applications.html)
@@ -21,5 +22,4 @@
 - [Archiving all bookmarks using the Pocket Developer API](https://solrevdev.com/2020/06/07/archive-all-bookmarks-using-the-pocket-developer-api.html)
 - [Adding TypeScript to an existing aspnetcore project](https://solrevdev.com/2020/06/06/adding-typescript-to-existing-aspnetcore-projects.html)
 - [Instagram Basic Display API](https://solrevdev.com/2020/05/28/instagram-basic-display-api.html)
-- [Deploy ASP.NET Core Web API to Fly via Docker](https://solrevdev.com/2020/05/18/deploy-aspnet-core-web-api-to-fly-via-docker.html)
 <!-- BLOG-POST-LIST:END -->
