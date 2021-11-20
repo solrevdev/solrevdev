@@ -1,6 +1,6 @@
 ### John Smith (solrevdev) :wave:
 
-- 🔭  A C#, .NET Core and ASP.NET Core software developer.
+- 👾  A C#, .NET Core and ASP.NET Core software developer.
 - 🇬🇧  Based in Northamptonshire UK
 - 🏠  https://solrevdev.com
 
