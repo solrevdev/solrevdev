@@ -1,7 +1,7 @@
 ### John Smith (solrevdev) :wave:
 
 - 👾  A #csharp, #dotnetcore, #aspnetcore #vuejs full stack software developer.
-- 🇬🇧  Based in Northamptonshire UK
+- 🇬🇧  Based in Oxfordshire UK
 - 🏠  https://solrevdev.com
 
 ### Get in touch 📧
