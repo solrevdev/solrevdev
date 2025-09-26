@@ -24,7 +24,7 @@ jobs:
           # Use only the atom.xml feed (most comprehensive with 79 posts)
           feed_list: "https://solrevdev.com/atom.xml"
           max_post_count: "10"
-          template: "- [$title]($url)$newline"
+          template: "- [$title]($url)"
           commit_message: "Updated with the latest blog posts"
           committer_username: "blog-post-bot"
           committer_email: "blog-post-bot@example.com"
