@@ -21,8 +21,8 @@ jobs:
       - name: Update README with blog posts
         uses: gautamkrishnar/blog-post-workflow@master
         with:
-          # Use only working RSS feeds (removed 404-causing rss.xml and feed/)
-          feed_list: "https://solrevdev.com/feed.xml,https://solrevdev.com/atom.xml"
+          # Use only the atom.xml feed (most comprehensive with 79 posts)
+          feed_list: "https://solrevdev.com/atom.xml"
           max_post_count: "10"
           template: "- [$title]($url)"
           commit_message: "Updated with the latest blog posts"
