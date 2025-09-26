@@ -1,20 +1,26 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 
 name: Latest blog post workflow
-on:
-    schedule: # Run workflow automatically
-      # This will make it run every hour
-      - cron: '0 * * * *'
-     # Run workflow manually (without waiting for the cron to be called), through the Github Actions Workflow page directly
-    workflow_dispatch:
+"on":
+  schedule: # Run workflow automatically
+    # This will make it run every hour at the top of the hour
+    - cron: '0 * * * *'
+  # Run workflow manually (without waiting for the cron to be called), through the Github Actions Workflow page directly
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
-    update-readme-with-blog:
-      name: Update this repo's README with latest blog posts
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - uses: gautamkrishnar/blog-post-workflow@master
-          with:
-            # Replace this URL with your rss feed URL/s
-            feed_list: "https://solrevdev.com/atom.xml"
-            max_post_count: "10"
+  update-readme-with-blog:
+    name: Update this repo's README with latest blog posts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Update README with blog posts
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          # Replace this URL with your rss feed URL/s
+          feed_list: "https://solrevdev.com/atom.xml"
+          max_post_count: "10"
