@@ -19,8 +19,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Update README with blog posts
-        uses: gautamkrishnar/blog-post-workflow@v1
+        uses: gautamkrishnar/blog-post-workflow@master
         with:
-          # Replace this URL with your rss feed URL/s
-          feed_list: "https://solrevdev.com/atom.xml"
+          # Try multiple RSS feed formats to ensure we find the correct one
+          feed_list: "https://solrevdev.com/feed.xml,https://solrevdev.com/atom.xml,https://solrevdev.com/rss.xml,https://solrevdev.com/feed/"
           max_post_count: "10"
+          template: "- [$title]($url)"
+          commit_message: "Updated with the latest blog posts"
+          committer_username: "blog-post-bot"
+          committer_email: "blog-post-bot@example.com"
