@@ -11,6 +11,11 @@ name: Latest blog post workflow
 permissions:
   contents: write
 
+env:
+  COMMITTER_USERNAME: blog-post-bot
+  COMMITTER_EMAIL: blog-post-bot@example.com
+  COMMIT_MESSAGE: Updated with the latest blog posts
+
 jobs:
   update-readme-with-blog:
     name: Update this repo's README with latest blog posts
@@ -25,6 +30,37 @@ jobs:
           feed_list: "https://solrevdev.com/atom.xml"
           max_post_count: "10"
           template: "$newline- [$title]($url)"
-          commit_message: "Updated with the latest blog posts"
-          committer_username: "blog-post-bot"
-          committer_email: "blog-post-bot@example.com"
+          commit_message: ${{ env.COMMIT_MESSAGE }}
+          committer_username: ${{ env.COMMITTER_USERNAME }}
+          committer_email: ${{ env.COMMITTER_EMAIL }}
+          # Retry the feed fetch instead of failing the run on a transient error
+          retry_count: "3"
+          retry_wait_time: "10"
+          # The action writes the README but does not push it. The step below
+          # pushes with a retry, because the action's own push has none and a
+          # transient 503 from GitHub fails the whole run.
+          skip_commit: "true"
+      - name: Commit and push README
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README unchanged, nothing to commit"
+            exit 0
+          fi
+
+          git config user.name "$COMMITTER_USERNAME"
+          git config user.email "$COMMITTER_EMAIL"
+          git add README.md
+          git commit -m "$COMMIT_MESSAGE"
+
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "Push failed on attempt $attempt, retrying in $((attempt * 10))s"
+            sleep $((attempt * 10))
+            git pull --rebase || true
+          done
+
+          echo "Push failed after 5 attempts"
+          exit 1
