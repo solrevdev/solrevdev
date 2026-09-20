@@ -1,6 +1,7 @@
 ### John Smith (solrevdev) :wave:
 
-- 👾  A #csharp, #dotnetcore, #aspnetcore #vuejs full stack software developer.
+- 👾  C# and .NET developer. Microsoft certified, ex Head of Infrastructure.
+- 🛠  I build small .NET global tools and write about AI-assisted coding.
 - 🇬🇧  Based in Oxfordshire UK
 - 🏠  https://solrevdev.com
 
